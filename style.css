@@ -1,0 +1,66 @@
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #000000; /* Black background similar to Spotify */
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #1db954; /* Spotify green */
+}
+
+.navbar-brand img, .nav-item img, .nav-link img {
+    height: 40px; /* Set all icons to be equal in size */
+}
+
+.btn-login-circle {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    border-radius: 50px; /* Make the button rounded */
+    padding: 13px 40px; /* Increased padding for a bigger, more filled-in button */
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-login-circle:hover {
+    background-color: #e6e6e6;
+}
+
+.text-secondary {
+    color: #b3b3b3; /* Grey text for Sign Up */
+    font-weight: 500;
+    margin-top: 0.3rem; /* Adjust this to lower the position */
+    margin-bottom: 0.25rem; /* Adjust the value as needed to lower it */
+    align-self: center; /* Ensures it aligns vertically with adjacent elements */
+}
+
+
+.search-bar {
+    background-color: #333333; /* Grey background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 75px; /* Elongated circle */
+    padding: 13px 20px;
+    width: 500px; /* Lengthened the search bar to five times its original size (previously 33%) */
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Center the search bar */
+}
+
+.search-bar::placeholder {
+    color: #b3b3b3; /* Lighter grey for placeholder text */
+}
+
+.search-bar:focus {
+    outline: none;
+    background-color: #444444; /* Slightly lighter on focus */
+}
+
+.nav-link spotifyhomebuttonicon2.png {
+    height: 60px; /* Increase height to make the icon larger */
+    width: 60px; /* Optionally adjust width to maintain aspect ratio or set a specific size */
+}
