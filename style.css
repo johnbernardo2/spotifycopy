@@ -1,9 +1,19 @@
 body {
+    background-color: #000000; /* Black background */
+    color: #ffffff;
     overflow-x: hidden;
+    min-height: 100vh; /* Full viewport height */
 }
+
+.container-fluid {
+    background-color: #000000; /* Black background inside the container */
+}
+
 
 .navbar {
     background-color: #000000; /* Black background similar to Spotify */
+    padding-top: 0.5rem; /* Adjust this value to reduce the top padding */
+    padding-bottom: 0rem; /* Adjust this value to reduce the bottom padding */
 }
 
 .nav-link {
@@ -14,9 +24,7 @@ body {
     color: #1db954; /* Spotify green */
 }
 
-.navbar-brand img, .nav-item img, .nav-link img {
-    height: 40px; /* Set all icons to be equal in size */
-}
+
 
 .btn-login-circle {
     background-color: #ffffff; /* White background */
@@ -39,28 +47,242 @@ body {
     align-self: center; /* Ensures it aligns vertically with adjacent elements */
 }
 
-
 .search-bar {
     background-color: #333333; /* Grey background */
     color: #ffffff; /* White text */
     border: none;
     border-radius: 75px; /* Elongated circle */
     padding: 13px 20px;
-    width: 500px; /* Lengthened the search bar to five times its original size (previously 33%) */
+    width: 500px; /* Lengthened the search bar to five times its original size */
     transition: background-color 0.3s ease;
     margin: 0 auto; /* Center the search bar */
+}
+.search-bar:focus {
+    outline: none;
+    background-color: #444444; /* Slightly lighter on focus */
+}
+
+.search-bar {
+    background-color: #333333; /* Grey background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 75px;
+    padding: 13px 20px;
+    width: 500px;
+    transition: background-color 0.3s ease, outline 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: 2px solid white; /* White outline on focus */
+    background-color: #444444; /* Slightly lighter background on focus (optional) */
 }
 
 .search-bar::placeholder {
     color: #b3b3b3; /* Lighter grey for placeholder text */
 }
 
-.search-bar:focus {
-    outline: none;
-    background-color: #444444; /* Slightly lighter on focus */
+
+
+.section-left {
+    background-color: #0F0F0F; /* Keep section-specific background */
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative; /* Allows absolute positioning for the add icon */
+}
+.section-right {
+    background-color: #131312; /* Match search bar grey color */
+    color: #ffffff; /* White text for better readability */
+    border-radius: 10px; /* Optional: rounded corners for sections */
+    padding: 20px;
 }
 
-.nav-link spotifyhomebuttonicon2.png {
-    height: 60px; /* Increase height to make the icon larger */
-    width: 60px; /* Optionally adjust width to maintain aspect ratio or set a specific size */
+.library-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px;
+    position: relative;
+    top:-5px; /* Adjust this value to control how much to push it up */
 }
+.add-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px;
+    position: absolute;
+    top:15px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+}
+.img-circle {
+    width: 150px; /* Adjust size */
+    height: 150px; /* Adjust size */
+    border-radius: 50%; /* Makes the image a circle */
+    object-fit: cover; /* Ensures the image is fully visible inside the circle */
+}
+
+.img-square {
+    width: 150px; /* Adjust size */
+    height: 150px; /* Adjust size */
+ /* Makes the image a circle */
+    object-fit: cover; /* Ensures the image is fully visible inside the circle */
+}
+/* Position the navbar at the bottom and create a gradient background */
+/* Center and Position Bottom Navbar below content */
+
+/* Styling for navigation links */
+
+.bottom-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Adds space between the links */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav a:hover {
+    color: #fff200; /* Hover effect */
+}
+
+
+.row .col-2 p {
+    text-align: left;
+}
+
+
+
+.nav-item-with-text {
+    position: relative; /* Allows adjustment of the text relative to the link */
+    display: inline-block; /* Keep the link and text in a block */
+}
+
+.nav-item-with-text .nav-text {
+    display: block;
+    position: absolute; /* Position relative to the parent div */
+    top: 35px; /* Adjust this value to control how far below the text appears */
+    left: 0;
+    font-size: 12px; /* Adjust the font size if needed */
+    color: white; /* Text color */
+}
+
+
+
+/* Bottom Navbar Styling */
+.bottom-nav {
+    display: flex;
+    justify-content: space-between; /* Space out the elements to the far sides */
+    align-items: center; /* Vertically center the items */
+    background: linear-gradient(to right, #B53389, #6495ED);
+    padding: 15px;
+    position: fixed; /* Stick to the bottom */
+    bottom: 0; /* Align at the bottom */
+    left: 0; /* Stick to the left edge */
+    right: 0; /* Stick to the right edge */
+    width: 100%; /* Full width */
+    z-index: 999; /* Ensure it stays on top */
+}
+
+/* Style for Text Links (Left Element) */
+.text-link {
+    color: white; /* Text color */
+    font-size: 18px; /* Adjust size */
+    color: white;
+    text-decoration: none;
+    margin-top: -100px; /* Move down (use negative to move up) */
+    margin-left: 10px; /* Move right (use negative to move left) */
+}
+
+
+/* Text below the First Link */
+.nav-text {
+    display: block;
+    font-size: 12px; /* Adjust size */
+    color: white; /* Adjust color */
+    margin-top: -10px; /* Adjust the space between the link and the text */
+    margin-left: 20px;
+    max-width: 300px; /* Optional: Limit the width of the text */
+}
+
+/* Style for the Settings Button (Right Element) */
+.btn-bottom-circle {
+    background-color: #ffffff; /* White background */
+    color: #000000 !important; /* Black text */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 30px; /* Padding for elongated shape */
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-bottom-circle:hover {
+    background-color: #e6e6e6; /* Slightly darker background on hover */
+    color: #1db954;
+}
+
+/* Apply Poppins font to the top and bottom navigation bars */
+.navbar, .bottom-nav {
+    font-family: 'Poppins', sans-serif; /* Set the font for the navbars */
+}
+
+
+/* Bottom Navbar Styling */
+.bottom-nav {
+    display: flex;
+    justify-content: space-between; /* Space out the elements */
+    align-items: center; /* Vertically center the items */
+    background: linear-gradient(to right, #B53389, #6495ED); /* Background */
+    padding: 10px 20px; /* Adjust padding */
+    position: fixed; /* Stick to the bottom */
+    bottom: 0; /* Align at the bottom */
+    left: 0; /* Stick to the left edge */
+    right: 0; /* Stick to the right edge */
+    width: 100%; /* Full width */
+    z-index: 999; /* Ensure it stays on top */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Style for Text Links (Left Element) */
+.text-link {
+    color: white; /* Text color */
+    font-size: 18px; /* Adjust size */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Text below the First Link */
+.nav-text {
+    white-space: nowrap; /* Prevent the text from wrapping */
+    display: inline-block; /* Keep the text on the same line */
+    font-size: 12px; /* Adjust size */
+    color: white; /* Adjust color */
+    margin-left: 10px; /* Add some space between link and text */
+    vertical-align: middle; /* Align the text vertically */
+    padding-top: -5px; /* Move the text higher by adjusting padding or margin */
+}
+
+/* Style for the Settings Button (Right Element) */
+.btn-bottom-circle {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 30px; /* Padding for elongated shape */
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-bottom-circle:hover {
+    background-color: #e6e6e6; /* Slightly darker background on hover */
+    color: #000000; /* Ensure text stays black on hover */
+}
+
+/* Styling for the artist label under each artist */
+.artist-label {
+    color: #B7B1B1; /* Grey color like 'Your library' */
+    font-size: 14px; /* Adjust the font size as needed */
+    margin-top: -10px; /* Adjust this value to move the label closer or farther from the artist's name */
+}
+
+.artist-link {
+    color: white; /* Change the link color */
+    text-decoration: none; /* Remove the underline */
+}
+
+.artist-link:hover {
+    color: #1db954; /* Change to Spotify green on hover */
+    text-decoration: underline; /* Add underline on hover for emphasis */
+}
+
